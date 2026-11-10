@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas-Shiakt Nigeria Limited | Agritech Solutions for Smallholder Farmers</title>
+    <!-- 
+    CUSTOMIZATION GUIDE - READ FIRST:
+    ═══════════════════════════════════════════════════════════════════════════
+    
+    IMAGE LOCATIONS TO UPDATE:
+    1. LOGO (Header) - Search for: "GUIDE: Replace the logo"
+    2. HERO IMAGE (Home Page) - Search for: "GUIDE: Replace with your actual farm"
+    3. CEO IMAGE (Leadership) - Search for: "GUIDE: Add a professional photo of Philip"
+    4. SERVICE IMAGES (Services Page) - Search for: "GUIDE: Replace emojis with actual"
+    
+    CONTACT DETAILS:
+    - Phone numbers are clickable (tel: links)
+    - Email is clickable (mailto: link)
+    - Address opens Google Maps
+    - Working hours on Contact page - search for: "GUIDE: Update working hours"
+    
+    COPYRIGHT YEAR: Automatically updates via JavaScript
+    
+    All inline comments marked with "<!-- GUIDE:" show exact locations to edit.
+    ═══════════════════════════════════════════════════════════════════════════
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0a0e0a;
+            --secondary-dark: #1a1f1a;
+            --gold-accent: #d4af37;
+            --green-primary: #2d5a4e;
+            --green-light: #3d7a6e;
+            --text-light: #f5f5f5;
+            --text-muted: #b0b0b0;
+            --success-green: #4ade80;
+            --border-color: #2d5a4e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ============ NAVIGATION ============ */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 10, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: var(--gold-accent);
+        }
+
+        nav a.active {
+            color: var(--gold-accent);
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 0.25rem;
+        }
+
+        /* ============ GENERAL STYLES ============ */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section.hidden {
+            display: none;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--gold-accent);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold-accent), var(--green-light));
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            padding: 8rem 2rem 6rem;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(45, 90, 78, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-light), var(--gold-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--gold-accent);
+            color: var(--primary-dark);
+        }
+
+        .btn-primary:hover {
+            background: #e5c158;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold-accent);
+            border: 2px solid var(--gold-accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold-accent);
+            color: var(--primary-dark);
+        }
+
+        .hero-image {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-light) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+        }
+
+        .hero-image::before {
+            content: '🌾';
+            font-size: 150px;
+            opacity: 0.3;
+        }
+
+        /* ============ IMPACT STATS ============ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ============ SERVICES SECTION ============ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold-accent);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* ============ PARTNERS SECTION ============ */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .partner-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover {
+            border-color: var(--gold-accent);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .partner-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .partner-name {
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .partner-role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ============ ABOUT SECTION ============ */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text h3 {
+            color: var(--gold-accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            height: 400px;
+            background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-light) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            border: 2px solid var(--border-color);
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .mission-card, .vision-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--gold-accent);
+        }
+
+        .mission-card h3, .vision-card h3 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        /* ============ CEO SPOTLIGHT ============ */
+        .ceo-section {
+            background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--green-primary) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+
+        .ceo-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .ceo-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--green-light) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            border: 2px solid var(--gold-accent);
+        }
+
+        .ceo-text h3 {
+            color: var(--gold-accent);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ceo-title {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .credentials {
+            margin-top: 2rem;
+        }
+
+        .credentials h4 {
+            color: var(--gold-accent);
+            font-size: 1rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .credentials ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .credentials li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .credentials li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold-accent);
+            font-weight: bold;
+        }
+
+        /* ============ APPROACH SECTION ============ */
+        .approach-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--gold-accent), var(--green-light));
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -11px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--gold-accent);
+            border: 3px solid var(--primary-dark);
+            border-radius: 50%;
+        }
+
+        .timeline-content {
+            background: var(--secondary-dark);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--gold-accent);
+        }
+
+        .timeline-content h4 {
+            color: var(--gold-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--secondary-dark);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold-accent);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 0.75rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .verified-badge {
+            display: inline-block;
+            background: var(--green-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--success-green);
+            margin-left: 0.5rem;
+        }
+
+        .pending-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gold-accent);
+            margin-left: 0.5rem;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-content, .about-grid, .ceo-content {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .hero {
+                padding: 5rem 1rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" onclick="showPage('home')" class="logo">
+                <!-- GUIDE: Replace the logo emoji with your actual logo image -->
+                <!-- To add your logo: Replace the image src below with your logo file path -->
+                <!-- Example: <img src="path/to/your/logo.png" alt="MSNL Logo" style="height: 40px; width: auto;"> -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='none' stroke='%232d5a4e' stroke-width='8'/%3E%3Cpath d='M100 40 L120 90 L100 85 L80 90 Z' fill='%23d4af37'/%3E%3Ccircle cx='100' cy='100' r='35' fill='none' stroke='%23d4af37' stroke-width='3'/%3E%3Cpath d='M85 95 Q85 110 100 115 Q115 110 115 95' fill='%232d5a4e'/%3E%3C/svg%3E" alt="MSNL Logo" style="height: 40px; width: auto; margin-right: 0.5rem;">
+                <span>Mas-Shiakt Nigeria Limited</span>
+            </a>
+            <ul>
+                <li><a onclick="showPage('home')" style="cursor: pointer;">Home</a></li>
+                <li><a onclick="showPage('about')" style="cursor: pointer;">About</a></li>
+                <li><a onclick="showPage('services')" style="cursor: pointer;">Services</a></li>
+                <li><a onclick="showPage('impact')" style="cursor: pointer;">Impact</a></li>
+                <li><a onclick="showPage('partners')" style="cursor: pointer;">Partners</a></li>
+                <li><a onclick="showPage('ceo')" style="cursor: pointer;">Leadership</a></li>
+                <li><a onclick="showPage('contact')" style="cursor: pointer;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <section id="home-page">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Empowering Smallholder Farmers Across Nigeria</h1>
+                    <p class="subtitle">Strengthened Technology + Enhanced Yield + Improved Income</p>
+                    <p>Mas-Shiakt Nigeria Limited transforms agricultural enterprises through sustainable practices, agribusiness training, and digital solutions that create lasting prosperity for women and youth farmers.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('services')">Explore Our Services</button>
+                        <button class="btn btn-secondary" onclick="showPage('contact')">Get In Touch</button>
+                    </div>
+                </div>
+                <div class="hero-image"></div>
+            </div>
+        </div>
+
+        <!-- IMPACT HIGHLIGHTS -->
+        <section style="padding: 4rem 0;">
+            <h2>Our Impact at a Glance</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">138K+</div>
+                    <div class="stat-label">Smallholder Farmers Reached</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20K+</div>
+                    <div class="stat-label">Farmers in Benue State Empowered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">60K+</div>
+                    <div class="stat-label">Women & Youth Farmers Trained</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2,000+</div>
+                    <div class="stat-label">Village Savings Groups Established</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK SERVICES PREVIEW -->
+        <section style="padding: 4rem 0;">
+            <h2>What We Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Training & Capacity Building</h3>
+                    <p>Contemporary sustainable agriculture practices, group formation, cooperative entrepreneurship, and best agronomic practices for improved productivity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3>Extension Service Delivery</h3>
+                    <p>Community-based extension workers trained in best practices, data collection, and project reporting for efficient service delivery across regions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏭</div>
+                    <h3>Value Addition & Enterprise</h3>
+                    <p>Post-harvest technologies, improved processing, market linkages, and business skills to diversify income and build resilient rural economies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>Agro-Inputs Distribution</h3>
+                    <p>Quality fertilizers, seeds, agrochemicals, farm implements, tools, and machines distributed through strategic partnerships and local networks.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about-page" class="hidden">
+        <h2>About Mas-Shiakt Nigeria Limited</h2>
+        <p class="subtitle">Established 2015 | RC: 1269129 | Abuja, Nigeria</p>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Our Story</h3>
+                <p>Mas-Shiakt Nigeria Limited was incorporated in 2015 with a singular focus: to deliver practical agricultural and agribusiness solutions that transform the lives of smallholder women and youth farmers.</p>
+                <p>We are dedicated to interconnecting agricultural enterprises and providing high-quality training in best agronomic practices, financial literacy, group formation, processing, and market linkages. Our approach has enabled thousands of rural households to transition from subsistence farming to sustainable, profitable enterprises.</p>
+                <p>Our journey is rooted in a passionate commitment to four key Sustainable Development Goals: No Poverty, Zero Hunger, Good Health and Well-being, and Decent Work & Economic Growth. Every project, every partnership, and every decision reflects our dedication to inclusivity and positive environmental and social impact.</p>
+            </div>
+            <div class="about-image">🤝</div>
+        </div>
+
+        <div class="mission-vision">
+            <div class="mission-card">
+                <h3>Our Mission</h3>
+                <p>To promote sustainable agricultural practices and agribusiness strategies among smallholder women and youth farmers to enhance revenue generation, create job opportunities, and strengthen food security.</p>
+            </div>
+            <div class="vision-card">
+                <h3>Our Vision</h3>
+                <p>Enabling women and youth farmers to build profitable, sustainable agricultural enterprises that generate income, create jobs, and contribute to lasting food security.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Our Value Proposition</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="service-icon">📈</div>
+                <h3>Increased Productivity</h3>
+                <p>Modern techniques and best practices boost yields significantly</p>
+            </div>
+            <div class="stat-card">
+                <div class="service-icon">💰</div>
+                <h3>Enhanced Incomes</h3>
+                <p>Value addition and market linkages double household earnings</p>
+            </div>
+            <div class="stat-card">
+                <div class="service-icon">👥</div>
+                <h3>Employment Opportunities</h3>
+                <p>Processing centers and enterprises create local jobs for youth</p>
+            </div>
+            <div class="stat-card">
+                <div class="service-icon">🥘</div>
+                <h3>Food Security</h3>
+                <p>Diverse crops and storage techniques ensure year-round nutrition</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Our Commitment</h2>
+        <p>We are committed to inclusive development that respects environmental boundaries and social responsibility. Our interventions emphasize regenerative agriculture, climate-smart practices, and digital technologies to help farmers establish revenue-generating platforms, create employment, and diversify household incomes.</p>
+        <p>Our approach facilitates access to input and output markets, manages environmental and social risks, and ensures that the voices and dignity of rural communities are recognized and valued.</p>
+    </section>
+
+    <!-- SERVICES PAGE -->
+    <section id="services-page" class="hidden">
+        <h2>Our Services & Focal Areas</h2>
+        <p class="subtitle">Comprehensive solutions across the entire agricultural value chain</p>
+
+        <!-- SERVICE 1: TRAINING -->
+        <div style="margin: 4rem 0; background: var(--secondary-dark); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem;">📚 Training & Capacity Building</h3>
+            <p style="margin-bottom: 1.5rem;">Our cornerstone service focuses on knowledge creation and transfer, preparing smallholder farming communities with contemporary and sustainable agriculture practices for improved productivity.</p>
+            
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">What We Cover:</h4>
+            <ul style="list-style: none; margin-bottom: 1.5rem;">
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Best Agronomic Practices</strong> – Crop selection, soil management, water conservation, and seasonal planning
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Group Formation & Development</strong> – Building cooperative structures, governance, and collective action
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Farming as Enterprise</strong> – Business planning, record-keeping, and profit optimization
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Cooperative Entrepreneurship</strong> – Value chain positioning and collective marketing
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Financial Literacy</strong> – Savings, credit, investment, and risk management
+                </li>
+            </ul>
+
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">Impact:</h4>
+            <p style="color: var(--text-muted);">Beneficiaries gain the knowledge and confidence to adopt modern farming techniques, manage groups effectively, and position their farms as sustainable, income-generating businesses.</p>
+        </div>
+
+        <!-- SERVICE 2: EXTENSION -->
+        <div style="margin: 4rem 0; background: var(--secondary-dark); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem;">🌱 Extension Service Delivery</h3>
+            <p style="margin-bottom: 1.5rem;">MSNL engages local youth as community extension workers, creating employment while ensuring practical, accessible, on-farm technical support.</p>
+            
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">Our Approach:</h4>
+            <ul style="list-style: none; margin-bottom: 1.5rem;">
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Extension Fundamentals Training</strong> – Community workers learn to diagnose problems and advise farmers
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Crop-Specific Technical Knowledge</strong> – Deep expertise in maize, rice, ginger, and other value crops
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Data Collection & Electronic Reporting</strong> – Real-time tracking of project outcomes and farmer progress
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Blended Support</strong> – In-person visits, demonstration plots, and farmer field schools
+                </li>
+            </ul>
+
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">Impact:</h4>
+            <p style="color: var(--text-muted);">Farmers receive reliable, localized technical advice, while youth gain employment and professional development. Our partners like OCP Africa have recognized this model's effectiveness and continue to support its expansion.</p>
+        </div>
+
+        <!-- SERVICE 3: VALUE ADDITION -->
+        <div style="margin: 4rem 0; background: var(--secondary-dark); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem;">🏭 Value Addition & Enterprise Development</h3>
+            <p style="margin-bottom: 1.5rem;">We take pride in our comprehensive approach to post-harvest technologies and enterprise development, aimed at household income diversification and rural economic resilience.</p>
+            
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">Our Core Offerings:</h4>
+            <ul style="list-style: none; margin-bottom: 1.5rem;">
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Processing Technologies</strong> – Modular mills for maize and rice, traditional and improved techniques
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Recipe Development & Food Safety</strong> – Improved recipes using household crops with certified food safety practices
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Business Skills for Processors</strong> – Pricing, branding, bookkeeping, quality control, and customer management
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Personal & Group Savings Programs</strong> – Building capital, credit access, and financial resilience
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Market Linkages & Distribution</strong> – Connecting processors to retailers, institutions, and end markets
+                </li>
+            </ul>
+
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">Recent Achievements:</h4>
+            <p style="color: var(--text-muted);"><strong>17 Modular Processing Centers</strong> established across Kaduna, Nasarawa, and Benue, with trained women cooperatives managing operations, pricing, and quality.</p>
+            <p style="color: var(--text-muted;">"><strong>20+ Rice & Maize Enterprises</strong> now operating with emphasis on women and youth ownership, generating reliable household income.</p>
+        </div>
+
+        <!-- SERVICE 4: AGRO-INPUTS -->
+        <div style="margin: 4rem 0; background: var(--secondary-dark); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem;">🛒 Agro-Inputs Distribution & Services</h3>
+            <p style="margin-bottom: 1.5rem;">As part of our operational mandate, we partner with local and international development agencies to ensure farmers have access to quality inputs at fair prices and convenient times.</p>
+            
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">What We Distribute:</h4>
+            <ul style="list-style: none; margin-bottom: 1.5rem;">
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    Certified seeds (maize, rice, legumes, vegetables)
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    Fertilizers (NPK, urea, organic amendments)
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    Agrochemicals (pesticides, herbicides, fungicides)
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    Farm implements (hoes, cutlasses, rakes, plows)
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    Machines & tools (pumps, generators, processing equipment)
+                </li>
+            </ul>
+
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">Our Advantage:</h4>
+            <ul style="list-style: none; margin-bottom: 1.5rem;">
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Quality Assurance</strong> – All inputs meet international and local standards
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Bulk Procurement Power</strong> – Lower costs passed to farmers through group purchasing
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Input Financing Programs</strong> – Partnership with OCP Africa and other lenders for farmer credit
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                    <strong>Technical Guidance</strong> – Every input sale includes recommendations on proper use and timing
+                </li>
+            </ul>
+
+            <h4 style="color: var(--text-light); font-size: 1.1rem; margin: 1.5rem 0 1rem 0;">Scale of Operations:</h4>
+            <p style="color: var(--text-muted);">Over the years, we have procured and distributed hundreds of tons of fertilizers (all major brands), seeds, agrochemicals, and farm implements to smallholder farmers, institutions, and organizations across multiple states.</p>
+        </div>
+    </section>
+
+    <!-- IMPACT PAGE -->
+    <section id="impact-page" class="hidden">
+        <h2>Our Impact & Reach</h2>
+        <p class="subtitle">Measurable outcomes transforming agricultural communities across Nigeria</p>
+
+        <!-- IMPACT METRICS -->
+        <h3 style="color: var(--gold-accent); margin: 3rem 0 1.5rem 0;">Key Performance Indicators</h3>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">138K+</div>
+                <div class="stat-label">Smallholder Farmers Empowered</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Across 8 states through direct and partner programs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">20K+</div>
+                <div class="stat-label">Farmers in Benue State</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Through OCP Africa partnership since 2021</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">60K+</div>
+                <div class="stat-label">Women & Youth Trained</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Mastercard Foundation/Ginger Value Chain</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Women & Youth Empowered</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">AGRA Gender Consortium (2022-2024)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2,000+</div>
+                <div class="stat-label">Village Savings Groups (VSLAs)</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Established across Northern Nigeria</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4,800+</div>
+                <div class="stat-label">Small-Scale Enterprises Supported</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">With capacity building and market linkages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">17</div>
+                <div class="stat-label">Modular Processing Centers</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Rice & maize mills in 3 states</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4,500+</div>
+                <div class="stat-label">Almajiri School Pupils</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Provided food security & nutrition (2011-2013)</div>
+            </div>
+        </div>
+
+        <!-- FLAGSHIP PROGRAMS -->
+        <h2 style="margin-top: 4rem;">Flagship Programs & Partnerships</h2>
+
+        <div class="approach-timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>OCP Africa – Farm and Fortune Hubs</h4>
+                    <p><strong>Partner:</strong> OCP Fertilizer Nigeria Limited | <strong>Period:</strong> Since 2021</p>
+                    <p>Training on Good Agronomic Practices, input financing, and cooperative development. Impacted <strong>20,000+ smallholder farmers</strong> in Oju and Apa LGAs, Benue State.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>AGRA Gender Consortium Project</h4>
+                    <p><strong>Role:</strong> Project Manager | <strong>Period:</strong> Jan 2022 – Dec 2024</p>
+                    <p>Empowered <strong>50,000 women and youth</strong> in Kaduna and Niger States. Impact is being replicated in neighboring countries by the funding organization.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>Smallholder Farmers Empowerment Program</h4>
+                    <p><strong>Scale:</strong> Multi-state | <strong>Status:</strong> Ongoing</p>
+                    <p>Benefited <strong>138,000+ smallholder rural farmers</strong> across eight states in Nigeria with training, input access, and market linkages.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>Mastercard Foundation – Ginger Value Chain</h4>
+                    <p><strong>Partner:</strong> Palm Valley Nigeria Limited | <strong>Support:</strong> Agrolog Recovery & Resilience Program</p>
+                    <p>Capacity building, extension service training, cooperative development, and agribusiness support impacting <strong>60,000+ smallholder women and youth farmers</strong>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>WOFAN-PVNL/ICON 2 Project – Processing Centers</h4>
+                    <p><strong>Partner:</strong> Palm Valley Nigeria Limited | <strong>Scope:</strong> 3 States</p>
+                    <p>Established <strong>17 modular maize and rice processing centers</strong> and trained women cooperatives on operations, pricing, branding, and bookkeeping in Kaduna, Nasarawa, and Benue.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>Education Sector Support Program (ESSPIN-IQTE)</h4>
+                    <p><strong>Funder:</strong> UKaid-DFID | <strong>Period:</strong> 2011 – 2013</p>
+                    <p>Provided food security, nutrition, and economic empowerment to <strong>116 Alamajiri school owners</strong> serving <strong>4,500+ pupils</strong> in Kaduna State.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- OUTCOMES -->
+        <h2 style="margin-top: 4rem;">Tangible Outcomes</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Enterprise Creation</h3>
+                <p>20+ modular rice and maize processing enterprises now operating, generating reliable household income with focus on women and youth ownership.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏦</div>
+                <h3>Financial Inclusion</h3>
+                <p>2,000+ Village Savings Loan Associations established, enabling farmers to build capital, access credit, and manage risk.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👥</div>
+                <h3>Youth Employment</h3>
+                <p>Hundreds of youth engaged as community extension workers, creating meaningful employment while building agricultural expertise.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌾</div>
+                <h3>Productivity Gains</h3>
+                <p>Farmers adopting improved practices report 30-50% yield increases and significantly higher incomes from optimized production.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔗</div>
+                <h3>Market Access</h3>
+                <p>Thousands of farmers linked to input suppliers, buyers, and institutional markets, reducing middlemen and improving margins.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌱</div>
+                <h3>Climate Resilience</h3>
+                <p>Adoption of conservation agriculture and climate-smart practices strengthens resilience to drought and seasonal variability.</p>
+            </div>
+        </div>
+
+        <!-- SDG ALIGNMENT -->
+        <h2 style="margin-top: 4rem;">Sustainable Development Goals Alignment</h2>
+        <p style="margin-bottom: 2rem;">Our work directly advances four critical SDGs:</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚫</div>
+                <h3>SDG 1: No Poverty</h3>
+                <p>Income generation through agriculture and enterprise development lifts families above poverty thresholds.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍽️</div>
+                <h3>SDG 2: Zero Hunger</h3>
+                <p>Enhanced food production, processing, and storage ensure year-round food security and improved nutrition.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">❤️</div>
+                <h3>SDG 3: Good Health</h3>
+                <p>Better nutrition, reduced malnutrition, and improved livelihoods strengthen community health and well-being.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>SDG 8: Decent Work</h3>
+                <p>Enterprise creation and youth employment provide dignified livelihoods and sustainable economic growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS PAGE -->
+    <section id="partners-page" class="hidden">
+        <h2>Our Strategic Partnerships</h2>
+        <p class="subtitle">Collaborating with leading organizations to scale impact across Nigeria</p>
+
+        <h3 style="color: var(--gold-accent); margin: 3rem 0 1.5rem 0;">Core Partners</h3>
+        <div class="partners-grid">
+            <div class="partner-card">
+                <div class="partner-icon">🌾</div>
+                <div class="partner-name">OCP Africa</div>
+                <div class="partner-role">Fertilizer & Input Supply</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Farm and Fortune Hubs partnership since 2021, supporting 20,000+ farmers in Benue State with training and input financing.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-icon">🚀</div>
+                <div class="partner-name">AGRA (Alliance for Green Revolution)</div>
+                <div class="partner-role">Gender & Resilience</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Gender Consortium Project (2022-2024) empowered 50,000 women and youth in Kaduna and Niger States.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-icon">❤️</div>
+                <div class="partner-name">Mastercard Foundation</div>
+                <div class="partner-role">Value Chain Development</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Recovery & Resilience Program through Agrolog, impacting 60,000+ farmers in ginger and other value chains.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-icon">🌲</div>
+                <div class="partner-name">Palm Valley Nigeria Limited</div>
+                <div class="partner-role">Processing & Agribusiness</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">WOFAN-PVNL/ICON 2: Established 17 modular processing centers across Kaduna, Nasarawa, and Benue.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-icon">📚</div>
+                <div class="partner-name">WOFAN (Women Farmers Advancement Network)</div>
+                <div class="partner-role">Women Empowerment</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Joint initiatives on women farmer development, enterprise creation, and market linkages.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-icon">🌍</div>
+                <div class="partner-name">International Development Partners</div>
+                <div class="partner-role">Multi-sector Support</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Collaborations with bilateral and multilateral organizations for capacity building and infrastructure development.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Why Partnerships Matter</h2>
+        <p style="margin-bottom: 2rem;">Our collaborative approach amplifies reach, combines expertise, and ensures sustainability. Partners bring:</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h3>Funding & Resources</h3>
+                <p>Access to capital, equipment, and operational support to scale programs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Technical Expertise</h3>
+                <p>Specialized knowledge in crop improvement, climate-smart agriculture, and value chains.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔗</div>
+                <h3>Market Access</h3>
+                <p>Connections to input suppliers, buyers, and institutional markets for farmers.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Monitoring & Learning</h3>
+                <p>Data systems and evaluation frameworks for tracking outcomes and continuous improvement.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Open to Collaboration</h2>
+        <p style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--gold-accent); color: var(--text-muted);">
+            MSNL is actively seeking partnerships with development organizations, NGOs, private sector actors, and donors aligned with our mission to empower smallholder farmers. If your organization shares our vision for sustainable agriculture and rural prosperity, <a href="#" onclick="showPage('contact')" style="color: var(--gold-accent); text-decoration: underline;">contact us</a> to explore collaboration opportunities.
+        </p>
+    </section>
+
+    <!-- CEO / LEADERSHIP PAGE -->
+    <section id="ceo-page" class="hidden">
+        <h2>Leadership & Vision</h2>
+        <p class="subtitle">Meet the founder driving MSNL's mission</p>
+
+        <div class="ceo-section">
+            <div class="ceo-content">
+                <div class="ceo-image">👨‍💼</div>
+                <div class="ceo-text">
+                    <h3>Philip</h3>
+                    <div class="ceo-title">Founder & Chief Executive Officer</div>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Over 20 years of extensive experience in agricultural business support services with a proven track record in enhancing production and productivity across both regional and international markets.</p>
+                    
+                    <h4 style="color: var(--gold-accent); margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">Leadership Journey</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Philip has established powerful partnerships with local and international organizations. His work with OCP Fertilizer Nigeria Limited on the "Agribooster" program and with AGRA on the initiative "Enhance Resilience and Upscale Gender-Inclusive Rural Economy for Increased Productivity, Livelihoods, and Food Security" showcases his leadership in driving transformative change.</p>
+                    
+                    <h4 style="color: var(--gold-accent); margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">Core Areas of Excellence</h4>
+                    <ul style="list-style: none; margin-bottom: 1.5rem;">
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">→</span>
+                            Entrepreneurship & SME Development
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">→</span>
+                            Financial Literacy & Capital Formation
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">→</span>
+                            Group Dynamics & Cooperative Development
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">→</span>
+                            Sustainable Agriculture & Climate-Smart Practices
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">→</span>
+                            Community Empowerment & Livelihoods
+                        </li>
+                    </ul>
+
+                    <h4 style="color: var(--gold-accent); margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">Signature Achievements</h4>
+                    <ul style="list-style: none; margin-bottom: 2rem;">
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                            Equipped beneficiaries to operate and manage <strong>2,000 Village Savings Loan Associations</strong> across three states in Northern Nigeria
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                            Supported <strong>4,800+ small-scale enterprises</strong> with capacity building and market linkages
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                            Established over <strong>20 modular rice and maize processing enterprises</strong> emphasizing women and youth ownership
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                            Managed AGRA Gender Consortium Project empowering <strong>50,000 women and youth</strong> (2022-2024)
+                        </li>
+                        <li style="padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                            <span style="position: absolute; left: 0; color: var(--gold-accent);">✓</span>
+                            Designed and implemented ESSPIN-IQTE program providing <strong>food security and economic empowerment</strong> to 116 Almajiri school owners and 4,500+ pupils (2011-2013)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL CREDENTIALS -->
+        <div style="margin-top: 4rem;">
+            <h2>Professional Credentials & Certifications</h2>
+            
+            <div class="credentials">
+                <h4>Core Certifications</h4>
+                <ul>
+                    <li><strong>Conservation Agriculture-based Sustainable Initiative (CASI)</strong> – Best practices in soil health and conservation</li>
+                    <li><strong>Fundamentals of Agricultural Extension</strong> – Training methodology and farmer engagement</li>
+                    <li><strong>Integrated Pest Management (IPM)</strong> – Sustainable crop protection strategies</li>
+                    <li><strong>Entrepreneurship Development</strong> – Centre for Multi-disciplinary Development Research (CMDR), backed by the Indian Council of Social Science Research (ICSSR), Karnataka, India</li>
+                </ul>
+
+                <h4>Advanced Expertise</h4>
+                <ul>
+                    <li><strong>International Finance Corporation (IFC) Environmental and Social Management System (ESMS)</strong> – Advancing expertise in environmental and social safeguards</li>
+                    <li><strong>UN Climate Change Initiatives</strong> – Robust understanding of climate adaptation and mitigation strategies</li>
+                </ul>
+
+                <h4>Recognition & Distinction</h4>
+                <ul>
+                    <li><strong>Tony Elumelu Foundation (TEF) Alumnus</strong> – Recognized as a pioneering entrepreneur dedicated to community empowerment and transformative change</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- VISION -->
+        <div style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-top: 3rem;">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1rem;">Vision for Impact</h3>
+            <p style="color: var(--text-muted); line-height: 1.8;">"I believe that smallholder farmers, especially women and youth, are the backbone of Africa's food security and economic resilience. My commitment is to build a movement where agriculture is not just a way of life, but a profitable, dignified, sustainable business that empowers entire communities. Every training session, every processing center, every savings group, and every market linkage we facilitate is a step toward transforming rural Nigeria into a hub of agricultural prosperity."</p>
+        </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contact-page" class="hidden">
+        <h2>Get In Touch</h2>
+        <p class="subtitle">We'd love to hear from you. Reach out to discuss partnerships, programs, or inquiries.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;">
+            <!-- CONTACT FORM -->
+            <div style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem;">Send us a Message</h3>
+                <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div>
+                        <label style="display: block; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Full Name</label>
+                        <input type="text" placeholder="Your name" style="width: 100%; padding: 0.75rem; background: var(--primary-dark); border: 1px solid var(--border-color); border-radius: 0.5rem; color: var(--text-light); font-family: inherit;">
+                    </div>
+                    <div>
+                        <label style="display: block; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Email</label>
+                        <input type="email" placeholder="your@email.com" style="width: 100%; padding: 0.75rem; background: var(--primary-dark); border: 1px solid var(--border-color); border-radius: 0.5rem; color: var(--text-light); font-family: inherit;">
+                    </div>
+                    <div>
+                        <label style="display: block; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Subject</label>
+                        <input type="text" placeholder="Subject" style="width: 100%; padding: 0.75rem; background: var(--primary-dark); border: 1px solid var(--border-color); border-radius: 0.5rem; color: var(--text-light); font-family: inherit;">
+                    </div>
+                    <div>
+                        <label style="display: block; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Message</label>
+                        <textarea placeholder="Your message..." rows="5" style="width: 100%; padding: 0.75rem; background: var(--primary-dark); border: 1px solid var(--border-color); border-radius: 0.5rem; color: var(--text-light); font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div>
+                <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem;">Contact Information</h3>
+                
+                <div style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--text-light); margin-bottom: 1rem;">Office Address</h4>
+                    <!-- GUIDE: Address is clickable - opens Google Maps with location -->
+                    <!-- To change address: Update the href link in the <a> tag below -->
+                    <p style="color: var(--text-muted);">
+                        <a href="https://maps.google.com/?q=DLS+12A+Corporate+Upper+Wing+Dubai+International+Market+Kaura+District+Abuja+Nigeria" target="_blank" style="color: var(--gold-accent); text-decoration: none; cursor: pointer;">
+                            DLS 12A Corporate Upper Wing<br>
+                            Dubai International Market<br>
+                            Behind Games Village<br>
+                            Kaura District<br>
+                            Abuja, Nigeria
+                        </a>
+                        <span class="verified-badge">Verified</span>
+                    </p>
+                </div>
+
+                <div style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--text-light); margin-bottom: 1rem;">Phone Numbers</h4>
+                    <!-- GUIDE: Phone numbers are clickable - initiates phone call on supported devices -->
+                    <!-- To change phone: Update the numbers in the tel: links below -->
+                    <p style="color: var(--text-muted); margin-bottom: 0.5rem;">
+                        <a href="tel:+2348065305386" style="color: var(--gold-accent); text-decoration: none; cursor: pointer;">
+                            <strong>+234 806 530 5386</strong>
+                        </a>
+                        <span class="verified-badge">Verified</span>
+                    </p>
+                    <p style="color: var(--text-muted);">
+                        <a href="tel:+2348028333925" style="color: var(--gold-accent); text-decoration: none; cursor: pointer;">
+                            <strong>+234 802 833 3925</strong>
+                        </a>
+                        <span class="verified-badge">Verified</span>
+                    </p>
+                </div>
+
+                <div style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--text-light); margin-bottom: 1rem;">Email</h4>
+                    <!-- GUIDE: Email is clickable - opens default email client -->
+                    <!-- To change email: Update the mailto: link and the display text below -->
+                    <p style="color: var(--text-muted);">
+                        <a href="mailto:masnigeria5@gmail.com" style="color: var(--gold-accent); text-decoration: none; cursor: pointer;">
+                            <strong>masnigeria5@gmail.com</strong>
+                        </a>
+                        <span class="verified-badge">Verified</span>
+                    </p>
+                </div>
+
+                <div style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--text-light); margin-bottom: 1rem;">Website</h4>
+                    <p style="color: var(--text-muted);">
+                        <strong><a href="https://masshiaktnigeria.com" target="_blank" style="color: var(--gold-accent); text-decoration: none;">https://masshiaktnigeria.com</a></strong>
+                        <span class="verified-badge">Verified</span>
+                    </p>
+                </div>
+
+                <div style="background: var(--secondary-dark); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-top: 1.5rem;">
+                    <h4 style="color: var(--text-light); margin-bottom: 1rem;">Working Hours</h4>
+                    <!-- GUIDE: Update working hours below with your actual business hours -->
+                    <!-- Format example: Monday - Friday: 8:00 AM - 5:00 PM, Saturday: 9:00 AM - 1:00 PM, Sunday: Closed -->
+                    <p style="color: var(--text-muted);">
+                        <strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM<br>
+                        <strong>Saturday:</strong> 9:00 AM - 1:00 PM<br>
+                        <strong>Sunday:</strong> Closed
+                        <span class="verified-badge">Updated</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOLLOW UP SECTION -->
+        <div style="background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--green-primary) 100%); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color); margin-top: 3rem;">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1rem;">What Happens Next?</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">After you reach out, our team will:</p>
+            <ul style="list-style: none;">
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">1.</span>
+                    Review your message within 24-48 hours
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">2.</span>
+                    Connect you with the appropriate team member or department
+                </li>
+                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-muted);">
+                    <span style="position: absolute; left: 0; color: var(--gold-accent); font-weight: bold;">3.</span>
+                    Discuss your inquiry and explore partnership or collaboration opportunities
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About MSNL</h4>
+                <p>Mas-Shiakt Nigeria Limited is a multi-disciplinary agritech company dedicated to empowering smallholder women and youth farmers through sustainable practices, training, and market linkages.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li><a onclick="showPage('services')" style="cursor: pointer;">Services</a></li>
+                    <li><a onclick="showPage('impact')" style="cursor: pointer;">Impact</a></li>
+                    <li><a onclick="showPage('partners')" style="cursor: pointer;">Partners</a></li>
+                    <li><a onclick="showPage('ceo')" style="cursor: pointer;">Leadership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <div>
+                            <div>DLS 12A Corporate Upper Wing</div>
+                            <div>Kaura District, Abuja</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <div>+234 806 530 5386</div>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <div>masnigeria5@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Company Info</h4>
+                <p style="margin-bottom: 0.5rem;"><strong>Registration:</strong> RC: 1269129</p>
+                <p style="margin-bottom: 0.5rem;"><strong>Established:</strong> 2015</p>
+                <p><strong>Location:</strong> Abuja, Nigeria</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <!-- GUIDE: Copyright year is automatically updated each year using JavaScript -->
+            <!-- No manual update needed - this will always show the current year -->
+            <p>&copy; <span id="currentYear"></span> Mas-Shiakt Nigeria Limited. All rights reserved. | Empowering smallholder farmers across Nigeria.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('section');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+            });
+
+            // Show selected page
+            const selectedPage = document.getElementById(pageId + '-page');
+            if (selectedPage) {
+                selectedPage.classList.remove('hidden');
+            }
+
+            // Update active nav link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Set current year in copyright - automatically updates every year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Set home page as default on load
+        window.addEventListener('load', () => {
+            document.getElementById('home-page').classList.remove('hidden');
+            document.querySelectorAll('nav a')[0].classList.add('active');
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will review it and get back to you shortly.');
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
